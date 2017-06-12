@@ -1,0 +1,63 @@
+npm init  初始化   项目说明书 
+
+gulp和webpack一起使用   
+gulp 的优点： 
+            1. 流程化
+            2. 图片引用打包方便
+gulp 的缺点：
+            1. 没有模块化开发
+            
+npm解决跨洋和gfw防火墙的限制： 
+             淘宝镜像： cnpm 
+            npm install -g cnpm --registry-https://registry.npm.taobao.org
+            在项目的全局下载 cnpm 
+
+下载gulp  ： 通过cnpm install gulp --save-dev   (一定是在项目的本地下载gulp，没有-g)；
+
+
+创建 src 和 dist文件  ：
+          dist文件是压缩后的文件夹 ，用来上传到服务器
+          
+
+
+配置gulgile.js 的几个事件  ： 
+        
+        var gulp = require('gulp');
+        var connect = require('gulp-connect');
+        
+            gulp.task('html',function(){
+                gulp.src('./src/index.html')
+                    .pipe(connect.reload())
+                    .pipe('./dist');
+            });
+            gulp.task('watch',function(){
+                gulp.watch('./src/index.html',['html'])
+                    
+            });
+            gulp.task('server',function(){
+                connect.server({
+                    port: 8090,
+                    livereload:true
+                })
+            })
+            
+            gulp.task('default',['html','watch','server']);
+          
+          
+          
+移动端musicplayer：
+        <meta name='viewport' content='width=device-width,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'></meta>             
+          
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+          
+

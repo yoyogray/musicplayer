@@ -1,0 +1,202 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font: 14px/20px Helvetice, sans-serif, arial;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.content-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 60px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.content-wrapper .song-img {
+  width: 50%;
+  height: 0;
+  padding-top: 50%;
+  margin: 0 auto 40px;
+  position: relative;
+}
+.content-wrapper .song-img .img-wrapper {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+.content-wrapper .song-img .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.content-wrapper .song-info {
+  text-align: center;
+  height: 126px;
+}
+.content-wrapper .song-info .song-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 200px;
+  margin: 0px auto;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+.content-wrapper .song-info .singer-name,
+.content-wrapper .song-info .album-name {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.content-wrapper .play-area {
+  display: flex;
+}
+.content-wrapper .play-area .current-time,
+.content-wrapper .play-area .all-time {
+  height: 40px;
+  line-height: 40px;
+  width: 60px;
+  color: #fff;
+  text-align: center;
+}
+.content-wrapper .play-area .pro-wrapper {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.content-wrapper .play-area .pro-wrapper .pro-top,
+.content-wrapper .play-area .pro-wrapper .pro-bottom {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 18px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.content-wrapper .play-area .pro-wrapper .pro-top {
+  background: #fff;
+  position: relative;
+  transform: translateX(-100%);
+}
+.content-wrapper .play-area .pro-wrapper .pro-top .slide-point {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-wrapper .play-area .pro-wrapper .pro-top .slide-point::after {
+  position: relative;
+  top: 1px;
+  width: 6px;
+  height: 6px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+.content-wrapper .control-area {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0px;
+}
+.content-wrapper .control-area .btn-wrapper {
+  flex: 1;
+}
+.content-wrapper .control-area .like-btn {
+  background: url('/img/icon-like.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+}
+.content-wrapper .control-area .like-btn.liked {
+  background-image: url('/img/icon-like-solid.png');
+}
+.content-wrapper .control-area .prev-btn {
+  background: url('/img/icon-prev.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+}
+.content-wrapper .control-area .play-btn {
+  background: url('/img/icon-play.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+}
+.content-wrapper .control-area .play-btn.played {
+  background-image: url('/img/icon-pause.png');
+}
+.content-wrapper .control-area .next-btn {
+  background: url('/img/icon-next.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+}
+.content-wrapper .control-area .list-btn {
+  background: url('/img/icon-list.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+}
+body .play-list {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  display: none;
+}
+body .play-list .head {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px ;
+}
+body .play-list .close-btn {
+  font-size: 16px;
+  height: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+body .play-list .play-list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+body .play-list .play-list-wrapper li {
+  justify-content: center;
+  padding-left: 30px;
+  margin-top: 10px;
+  position: relative;
+}
+body .play-list .play-list-wrapper li span {
+  margin-left: 20px;
+  position: absolute;
+  left: 200px;
+}
